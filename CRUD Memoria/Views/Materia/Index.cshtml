@@ -1,0 +1,35 @@
+﻿@using CRUD_Memoria.Utilities
+@model IEnumerable<CRUD_Memoria.Models.Materia>
+
+@{
+    ViewBag.Title = "Materia";
+}
+
+<h2>Materia</h2>
+
+<p>
+    @Html.ActionLink("Crear", "Form", new { operacion = Operacion.insertar }, new { Class = "btn btn-success text-white" })
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "Form", new { id = item.Id, operacion = Operacion.modificar }, new { Class = "btn btn-secondary text-white" }) |
+                @Html.ActionLink("Ver", "Form", new { id = item.Id, operacion = Operacion.ver }, new { Class = "btn btn-info text-white" }) |
+                @Html.ActionLink("Eliminar", "Delete", new { id = item.Id, operacion = Operacion.eliminar }, new { Class = "btn btn-danger text-white" })
+            </td>
+        </tr>
+    }
+
+</table>

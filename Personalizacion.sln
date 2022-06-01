@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Personalizacion de Disenio", "CRUD Memoria\Personalizacion de Disenio.csproj", "{44D92D53-FE12-44A5-B364-D16ACE0D412C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{44D92D53-FE12-44A5-B364-D16ACE0D412C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44D92D53-FE12-44A5-B364-D16ACE0D412C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44D92D53-FE12-44A5-B364-D16ACE0D412C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44D92D53-FE12-44A5-B364-D16ACE0D412C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {14CD0E25-A7B9-4329-88E5-2CDD5D0686AB}
+	EndGlobalSection
+EndGlobal

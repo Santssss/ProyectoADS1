@@ -1,0 +1,52 @@
+﻿@using CRUD_Memoria.Utilities
+@model IEnumerable<CRUD_Memoria.Models.Estudiante>
+
+@{
+    ViewBag.Title = "Estudiantes";
+}
+
+<h2>Estudiante</h2>
+
+<p>
+    @Html.ActionLink("Crear", "Form", new { operacion= Operacion.insertar }, new { Class = "btn btn-success text-white" })
+</p>
+<table class="table table-hover">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.codigo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nombres)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.apellidos)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.codigo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.nombres)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.apellidos)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Form", new { id = item.id, operacion = Operacion.modificar }, new { Class = "btn btn-secondary text-white" }) |
+            @Html.ActionLink("Ver", "Form", new { id = item.id, operacion = Operacion.ver }, new { Class = "btn btn-info text-white" }) |
+            @Html.ActionLink("Eliminar", "Delete", new { id = item.id, operacion = Operacion.eliminar }, new { Class = "btn btn-danger text-white" })
+        </td>
+    </tr>
+}
+
+</table>
